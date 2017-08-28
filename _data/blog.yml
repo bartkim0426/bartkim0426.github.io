@@ -6,21 +6,21 @@
 - name: Python
   href: /python/
 
+- name: Frontend
+  href: /html/
+
 - name: Linux
   href: /linux/
 
-- name: HTML
-  href: /html/
-
-- name: Database
+- name: Tools
   href: /database/
 
-- name: Mac
+- name: Vim
   href: /mac/
 
 - name: Life
   href: /life/
 
 # Don't display donation page: change donation to off at file '_config.yml'
-- name: Donate
-  href: /donate/
+# - name: Donate
+#   href: /donate/
