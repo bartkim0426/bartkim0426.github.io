@@ -50,7 +50,7 @@ url에 해당 파일의 cloud 주소 url을 넣어준다.
 curl -s -k -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer ACCESS_TOKEN \
     'https://speech.googleapis.com/v1/speech:recognize' \
-	  -d @request.json
+	  -d @sync-request.json
 ```
 
 
@@ -63,3 +63,46 @@ download [python-docs-sample/speech](https://github.com/GoogleCloudPlatform/pyth
 
 ### speec-to-server
 누군가 이미 만들어 놓은 client side [라이브러리](https://github.com/akrennmair/speech-to-server)를 쓰면 web상에서 녹음을 해 바로 google speech api로 보낼 수 있다.
+
+### Trouble shooting
+[google speech api support page](https://cloud.google.com/speech/support)
+
+
+### examples for longrunningrecognize speech api
+make `sync-request.json` and do some commands.    
+
+```bash
+# login
+gcloud auth application-default login
+# get access token
+# have to get token every time?
+gcloud auth print-access-token
+
+# use longrunningrecognize curl request
+# have to pass your ACCESS_TOKEN
+curl -s -k -H 'Content-Type: application/json' \
+  -H 'Authorization: Bearer ACCESS_TOKEN \
+    'https://speech.googleapis.com/v1/speech:longrunningrecognize' \
+	  -d @sync-request.json
+
+# use 'name' to get result
+# maybe takes few min
+curl -s -k -H "Content-Type: application/json" \
+    -H "Authorization: Bearer {access_token}" \
+	    https://speech.googleapis.com/v1/operations/{name}
+```
+
+If you want to send POST/GET(by Postman or etc), you can do like this
+
+```
+# POST method
+# You can get 'name' value in this POST
+POST https://speech.googleapis.com/v1/speech:longrunningrecognize?key={YOUR_API_KEY}
+# GET method
+GET https://speech.googleapis.com/v1/operations/YOUR_OPERATION_NAME?key=YOUR_API_KEY
+```
+
+> After done, I have to do make a request-response method later
+
+### After ToDo List
+**Workflow**
