@@ -15,3 +15,7 @@ cron만 써보고 celery는 사용해 보지 않아서 이번 프로젝트에서
 최신 장고에서는 celery가 자동으로 지원되서 따로 설치하지 않아도 괜찮다
 
 
+## Installing celery
+`pip install celery`
+
+## 

@@ -18,13 +18,13 @@ Then you can use sox commands like `sox`, `play`.
 
 ### Changing Stereo to Mono
 If you want to use google API, you have to change stereo to mono.    
-```
+```bash
 sox input.flac outfile.l.flac remix 1 
 sox input.flac outfile.l.flac remix 2
 ```
 
 ### Changing mp3 to flac    
-```
+```bash
 # using ffmpeg
 ffmpeg -i input.mp3 output.flac
 

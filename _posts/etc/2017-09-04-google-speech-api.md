@@ -94,15 +94,29 @@ curl -s -k -H "Content-Type: application/json" \
 
 If you want to send POST/GET(by Postman or etc), you can do like this
 
-```
-# POST method
-# You can get 'name' value in this POST
-POST https://speech.googleapis.com/v1/speech:longrunningrecognize?key={YOUR_API_KEY}
-# GET method
+```bash
+# 1. POST request using speech API
+# You can get 'name' from it
+https://speech.googleapis.com/v1/speech:longrunningrecognize?key={YOUR_API_KEY}
+{
+  "config": {
+      "encoding":"FLAC",
+      "sampleRateHertz": 44100,
+      "languageCode": "ko-KR",
+      "enableWordTimeOffsets": false
+  },
+  "audio": {
+      "uri":"gs://speech-suwon/filename.flac"
+  }
+}
+
+# 2. GET response result by GET method
 GET https://speech.googleapis.com/v1/operations/YOUR_OPERATION_NAME?key=YOUR_API_KEY
 ```
 
-> After done, I have to do make a request-response method later
+After done, I have to do make a request-response method later    
+> [reference StackOverflow](https://stackoverflow.com/questions/44037026/google-cloud-speech-api-longrunningrecognize-only-returns-name)
 
 ### After ToDo List
 **Workflow**
+
