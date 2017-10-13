@@ -48,3 +48,5 @@ listen_addresses = '*'
 # you can use other command to restart
 sudo service restart postgresql
 ```
+
+> If using aws, you should open security group: TCP: 5432
