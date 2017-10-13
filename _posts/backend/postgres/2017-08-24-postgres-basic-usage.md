@@ -42,6 +42,12 @@ ALTER ROLE myrole WTIH CREATEDB;
 \password myrole
 ```
 
+### setting passwords for user
+```bash
+ALTER USER postgres with password 'password';
+```
+
+
 ### give authuization to role
 ```bash
 # give all auth of table to role

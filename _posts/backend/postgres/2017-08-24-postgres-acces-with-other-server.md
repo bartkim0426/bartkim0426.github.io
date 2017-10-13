@@ -8,7 +8,8 @@ categories: postgres
 
 ### In postgres server
 
-1. finding `pg_hab.conf`
+1. finding `pg_hab.conf`    
+
 you can find with next command
 ```bash
 # login with sudo user
