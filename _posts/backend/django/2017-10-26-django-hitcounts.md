@@ -12,6 +12,7 @@ categories: django django-hitcounts
 pip install django-hitcount
 ```
 
+
 Installed app에 넣는것을 까먹으면 안된다
 ```
 # settings.py
@@ -20,6 +21,7 @@ INSTALLED_APPS = (
 	'hitcount'
 )
 ```
+
 
 ## DetailView, Model에 추가하기
 CBV (DetailView)를 사용해서 detail page를 만들어 놓았다면, 아주 쉽게 hit 수를 카운팅할 수 있다. (만약 fbv로 구현이 되어있다면 이번 기회에 CBV를 사용해보자. 좋다.)
@@ -42,7 +44,9 @@ my_model.hit_count.hits
 my_model.hit_count.hits_in_last(days=7)
 ```
 
+
 다음은 DetailView. view도 마찬가지로 `HitCountDetailView`를 상속받은 이후 `count_hit = True`를 적어주면 완료된다.
+
 
 
 ```
@@ -55,25 +59,13 @@ class PostCountHitDetailView(HitCountDetailView):
 	count_hit = True    # set to True if you want it to try and count the hit
 ```
 
+
 ## Temploate tag
 그냥 `{{ object.hit_count.hits }}`로 불러올 수도 있지만, 템플릿 태그를 사용해서 더 쉽게 불러올 수 있따
 
 
+
 ```
-# remember to load the tags first
-{% load hitcount_tags %}
-
-# Return total hits for an object:
-{% get_hit_count for [object] %}
-
-# Get total hits for an object as a specified variable:
-{% get_hit_count for [object] as [var] %}
-
-# Get total hits for an object over a certain time period:
-{% get_hit_count for [object] within ["days=1,minutes=30"] %}
-
-# Get total hits for an object over a certain time period as a variable:
-{% get_hit_count for [object] within ["days=1,minutes=30"] as [var] %}
 ```
 
 
