@@ -66,9 +66,31 @@ encoding: utf-8
 #   syntax_highlighter: rouge
 
 # Conversion
-markdown: kramdown
-highlighter: redcarpet
+# markdown: kramdown
+# highlighter: redcarpet
+
+# kramdown:
+#     input: GFM
+#     auto_ids: true
+#     footnote_nr: 1
+#     entity_output:  as_char
+#     toc_levels:     1..6
+#     smart_quotes:   lsquo,rsquo,ldquo,rdquo
+#     enable_coderay: false
+#     # syntax_highlighter: rouge
+#     syntax_highlighter: redcarpet
+
+# Conversion markdown: redcarpet 
+# highlighter: pygments 
+redcarpet: 
+    extensions: ["fenced_code_blocks", "disable_indented_code_blocks"]
+    # coderay:
+    #     coderay_wrap:              div
+    #     coderay_line_numbers:      inline
+    #     coderay_line_number_start: 1
+    #     coderay_tab_width:         4
+    #     coderay_bold_every:        10
+    #     coderay_css:               style
+    # syntax_highlighter: redcarpet
 # highlighter: pygments
-redcarpet:
-    extensions: []
-#   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
+    # extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
