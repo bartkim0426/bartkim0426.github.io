@@ -20,3 +20,38 @@ def getCommit(commit):
     return commit.lstrip('0?+!')
 ```
 
+
+### 18-06-05
+
+**lambda**
+
+```python
+repeatChar = lambda ch, n: ch * n
+```
+
+```python
+def getPoints(answers, p):
+    questionPoints = lambda i, ans: i+1 if ans else -p
+
+    res = 0
+    for i, ans in enumerate(answers):
+        res += questionPoints(i, ans)
+    return res
+```
+
+
+```python
+def sortStudents(students):
+    students.sort(key= lambda s: s.split()[-1] )
+    return students
+```
+
+```python
+def isTestSolvable(ids, k):
+    digitSum = lambda x: sum(map(int, str(x)))
+
+    sm = 0
+    for questionId in ids:
+        sm += digitSum(questionId)
+    return sm % k == 0
+```
