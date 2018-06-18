@@ -55,3 +55,13 @@ def isTestSolvable(ids, k):
         sm += digitSum(questionId)
     return sm % k == 0
 ```
+
+### 6/14
+
+```python
+def coolPairs(a, b):
+    uniqueSums = {x+y for x in a for y in b if (x*y) % (x+y) == 0}
+    return len(uniqueSums)
+```
+
+
