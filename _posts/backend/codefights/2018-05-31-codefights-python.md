@@ -65,3 +65,19 @@ def coolPairs(a, b):
 ```
 
 
+
+### 6/19
+
+```python
+def chessTeams(smarties, cleveries):
+    return [list((x, y)) for x, y in zip(smarties, cleveries)]
+
+def chessTeams(smarties, cleveries):
+    return list(zip(smarties, cleveries))
+```
+
+### 6/22
+
+```python
+
+```
