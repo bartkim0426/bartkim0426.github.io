@@ -4,6 +4,8 @@ title:  "ES6: let, const 공통점과 차이점"
 categories: js
 ---
 
+## let, const 공통점 / 차이점
+
 - es2015에 `let`, `const`가 추가됨
 
 - 기존 자바스크립트의 `var`의 문제점
