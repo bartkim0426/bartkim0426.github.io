@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "파이썬으로 블록체인 만들어보기"
+title:  "파이썬으로 블록체인 만들어보기 - 1"
 categories: blockchain
 ---
 
